@@ -54,5 +54,6 @@ generator erd {
   bodyBackgroundColor2  = "#e8efff"
   bodyForegroundColor   = "black"
   typeForegroundColor   = "#4f83ff"
+  documentBackgroundColor = "white"
 }
 ```

@@ -20,6 +20,7 @@ export type PrismaGrapherConfig = {
   bodyBackgroundColor2?: string;
   bodyForegroundColor?: string;
   typeForegroundColor?: string;
+  documentBackgroundColor?: string;
 };
 
 const identifier = (...parts: string[]) =>
@@ -41,6 +42,7 @@ export async function generate(options: GeneratorOptions) {
   const bodyBackgroundColor2 = config.bodyBackgroundColor2 ?? "#e8efff";
   const bodyForegroundColor = config.bodyForegroundColor ?? "black";
   const typeForegroundColor = config.typeForegroundColor ?? "#4f83ff";
+  const documentBackgroundColor = config.documentBackgroundColor ?? "white";
 
   if (disabled) {
     return console.log("prisma grapher is disabled");
@@ -271,6 +273,7 @@ export async function generate(options: GeneratorOptions) {
         labelloc="t"
         fontname="Arial,sans-serif"
         rankdir="LR"
+        bgcolor="${documentBackgroundColor}"
       ]
       node [
         fontname="Arial,sans-serif"
